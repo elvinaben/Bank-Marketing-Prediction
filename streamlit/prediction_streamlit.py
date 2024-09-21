@@ -3,15 +3,20 @@ import joblib
 import numpy as np
 import pandas as pd
 
+import os
+
+# Define the folder where the pickle files are located
+streamlit_folder = 'streamlit'
+
 # Load model and artifacts
-model = joblib.load('streamlit/Bagging_dt.pkl')
-mappings = joblib.load('streamlit/mappings.pkl')
-scaler = joblib.load('streamlit/standard_scaler.pkl')
-job_train_unique = joblib.load('streamlit/job_train_unique.pkl')
-education_train_unique = joblib.load('streamlit/education_train_unique.pkl')
-marital_train_unique = joblib.load('streamlit/marital_train_unique.pkl')
-month_train_unique = joblib.load('streamlit/month_train_unique.pkl')
-dow_train_unique = joblib.load('streamlit/dow_train_unique.pkl')
+model = joblib.load(os.path.join(streamlit_folder, 'Bagging_dt.pkl'))
+mappings = joblib.load(os.path.join(streamlit_folder, 'mappings.pkl'))
+scaler = joblib.load(os.path.join(streamlit_folder, 'standard_scaler.pkl'))
+job_train_unique = joblib.load(os.path.join(streamlit_folder, 'job_train_unique.pkl'))
+education_train_unique = joblib.load(os.path.join(streamlit_folder, 'education_train_unique.pkl'))
+marital_train_unique = joblib.load(os.path.join(streamlit_folder, 'marital_train_unique.pkl'))
+month_train_unique = joblib.load(os.path.join(streamlit_folder, 'month_train_unique.pkl'))
+dow_train_unique = joblib.load(os.path.join(streamlit_folder, 'dow_train_unique.pkl'))
 
 def format_job(job):
     return job.replace('blue-collar', 'Blue collar').title()

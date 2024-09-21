@@ -1,6 +1,4 @@
-import os
-import streamlit as st
-
+# Only temp to check
 streamlit_folder = 'streamlit'
 st.write("Files in streamlit folder:")
 st.write(os.listdir(streamlit_folder))

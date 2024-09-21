@@ -6,6 +6,16 @@ st.write("Files in streamlit folder:")
 st.write(os.listdir(streamlit_folder))
 
 
+# Get the current working directory
+current_dir = os.getcwd()
+
+# Define the absolute path for the streamlit folder
+streamlit_folder = os.path.join(current_dir, 'streamlit')
+
+# Load model and artifacts
+model = joblib.load(os.path.join(streamlit_folder, 'Bagging_dt.pkl'))
+print('hi')
+
 
 import streamlit as st
 import joblib

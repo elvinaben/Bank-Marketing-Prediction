@@ -1,3 +1,12 @@
+import os
+import streamlit as st
+
+streamlit_folder = 'streamlit'
+st.write("Files in streamlit folder:")
+st.write(os.listdir(streamlit_folder))
+
+
+
 import streamlit as st
 import joblib
 import numpy as np

@@ -5,10 +5,10 @@ import pandas as pd
 
 import os
 
-# Define the folder where the pickle files are located
-streamlit_folder = 'streamlit'
+# Get absolute path to the current script location
+base_path = os.path.dirname(os.path.abspath(__file__))
+streamlit_folder = os.path.join(base_path, 'streamlit')
 
-# Load model and artifacts
 model = joblib.load(os.path.join(streamlit_folder, 'Bagging_dt.pkl'))
 mappings = joblib.load(os.path.join(streamlit_folder, 'mappings.pkl'))
 scaler = joblib.load(os.path.join(streamlit_folder, 'standard_scaler.pkl'))
@@ -17,6 +17,7 @@ education_train_unique = joblib.load(os.path.join(streamlit_folder, 'education_t
 marital_train_unique = joblib.load(os.path.join(streamlit_folder, 'marital_train_unique.pkl'))
 month_train_unique = joblib.load(os.path.join(streamlit_folder, 'month_train_unique.pkl'))
 dow_train_unique = joblib.load(os.path.join(streamlit_folder, 'dow_train_unique.pkl'))
+
 
 def format_job(job):
     return job.replace('blue-collar', 'Blue collar').title()

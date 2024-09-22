@@ -1,5 +1,5 @@
 import joblib
-model = joblib.load('Bagging_dt.pkl')
+model = joblib.load('streamlit/Bagging_dt.pkl')
 
 # Check the class and module
 print(f"Model Class: {model.__class__.__name__}")

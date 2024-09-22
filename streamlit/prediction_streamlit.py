@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Load model and artifacts
-model = joblib.load('Bagging_dt.pkl')
+
 mappings = joblib.load('mappings.pkl')
 scaler = joblib.load('standard_scaler.pkl')
 job_train_unique = joblib.load('job_train_unique.pkl')
@@ -12,6 +12,7 @@ education_train_unique = joblib.load('education_train_unique.pkl')
 marital_train_unique = joblib.load('marital_train_unique.pkl')
 month_train_unique = joblib.load('month_train_unique.pkl')
 dow_train_unique = joblib.load('dow_train_unique.pkl')
+model = joblib.load('Bagging_dt.pkl')
 
 def format_job(job):
     return job.replace('blue-collar', 'Blue collar').title()

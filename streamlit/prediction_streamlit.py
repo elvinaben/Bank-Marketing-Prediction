@@ -1,3 +1,13 @@
+import joblib
+print('hi1')
+# Load your model
+model = joblib.load('path_to_your_model.pkl')
+print('hi2')
+# Check the class and module
+print(f"Model Class: {model.__class__.__name__}")
+print(f"Model Module: {model.__module__}")
+
+
 import streamlit as st
 import joblib
 import numpy as np

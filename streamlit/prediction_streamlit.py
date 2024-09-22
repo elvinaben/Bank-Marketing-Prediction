@@ -1,3 +1,12 @@
+import streamlit as st
+import sklearn
+import joblib
+
+st.write(f"Streamlit version: {streamlit.__version__}")
+st.write(f"scikit-learn version: {sklearn.__version__}")
+st.write(f"joblib version: {joblib.__version__}")
+
+
 import joblib
 model = joblib.load('streamlit/Bagging_dt.pkl')
 

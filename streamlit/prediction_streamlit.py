@@ -1,20 +1,4 @@
 import streamlit as st
-import sklearn
-import joblib
-
-st.write(f"Streamlit version: {streamlit.__version__}")
-st.write(f"scikit-learn version: {sklearn.__version__}")
-st.write(f"joblib version: {joblib.__version__}")
-
-
-import joblib
-model = joblib.load('streamlit/Bagging_dt.pkl')
-
-# Check the class and module
-print(f"Model Class: {model.__class__.__name__}")
-print(f"Model Module: {model.__module__}")
-
-import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd

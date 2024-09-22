@@ -1,3 +1,10 @@
+import joblib
+model = joblib.load('Bagging_dt.pkl')
+
+# Check the class and module
+print(f"Model Class: {model.__class__.__name__}")
+print(f"Model Module: {model.__module__}")
+
 import streamlit as st
 import joblib
 import numpy as np

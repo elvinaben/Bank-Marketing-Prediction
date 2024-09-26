@@ -82,9 +82,10 @@ def predict(input_data):
     input_data[num_cols] = scaler.transform(input_data[num_cols])
 
     all_columns = model.feature_names_in_
-    st.write("Feature Names Used in the Model:", all_columns)  # Display the feature names in the app
-    
-    st.write("All Cols Before Deleted:", input_data)
+
+    # Only for checking purposes
+    # st.write("Feature Names Used in the Model:", all_columns)  # Display the feature names in the app
+    # st.write("All Cols Before Deleted:", input_data)
 
     # Remove unnecessary columns
     for col in all_columns:
@@ -93,9 +94,9 @@ def predict(input_data):
 
     input_data = input_data[all_columns]
 
+    # Only for checking purposes
     # st.write("Columns in Input Data After Encoding:", input_data.columns.tolist())
-
-    st.write("Final Input Data After Preprocessing:", input_data)
+    # st.write("Final Input Data After Preprocessing:", input_data)
 
     return model.predict(input_data)[0]
 

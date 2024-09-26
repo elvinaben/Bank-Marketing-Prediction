@@ -30,8 +30,8 @@ The decision tree achieved an F1-Score of 50% for the "yes" class, while the bag
 ## Deployment
 The **bagging decision tree model** was selected for deployment in **FastAPI** and **Streamlit**, aimed at predicting whether a customer is a potential target for the bank's long-term deposit offers.
 
-### FastAPI Deployment
-#### Sample of a potential customer
+## FastAPI Deployment
+### Sample of a potential customer
 <img width="887" alt="image" src="https://github.com/user-attachments/assets/aec041b4-43a4-4be0-a638-d383b8173ddb">
 
 **Input :** 
@@ -42,7 +42,7 @@ The **bagging decision tree model** was selected for deployment in **FastAPI** a
 
 <img width="511" alt="image" src="https://github.com/user-attachments/assets/4597d4ef-bbdb-4744-b72f-c91a04af3eff">
 
-#### Sample of a non-potential customer
+### Sample of a non-potential customer
 <img width="843" alt="image" src="https://github.com/user-attachments/assets/49efa1b8-cfa0-4ac0-95b4-b96153d50dc4">
 
 **Input :** 
@@ -53,7 +53,7 @@ The **bagging decision tree model** was selected for deployment in **FastAPI** a
 
 <img width="310" alt="image" src="https://github.com/user-attachments/assets/9f407993-5201-489a-8569-81972edb5050">
 
-### Streamlit Deployment
+## Streamlit Deployment
 <img width="372" alt="image" src="https://github.com/user-attachments/assets/4fe2199c-c64e-4436-8533-8cd4fae2c4a4">
 
 <img width="370" alt="image" src="https://github.com/user-attachments/assets/d61331eb-f29d-4f64-b3cb-2b62feb18a4b"> 
